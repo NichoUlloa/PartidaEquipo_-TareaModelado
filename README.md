@@ -22,3 +22,4 @@ Un equipo tiene al menos un jugador y cada jugador pertenece a un sólo equipo. 
 - Jugador pertenece a un equipo (1)
 
 ### Diagrama de clases:
+![Class Diagram2](https://github.com/NichoUlloa/PartidaEquipo_-TareaModelado/assets/145157325/80ad6e86-3882-4c10-95fb-fae0b7de3272)
