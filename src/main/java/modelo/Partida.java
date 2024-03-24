@@ -3,14 +3,16 @@ public class Partida {
     // Atributos
     private String fecha;
     private String lugar;
-    private Equipo equipo;
+    private Equipo equipoLocal;
+    private Equipo equipoVisitante;
     private Arbitro arbitro;
 
     // Constructor
-    public Partida(String fecha, String lugar, Equipo equipo, Arbitro arbitro) {
+    public Partida(String fecha, String lugar, Equipo equipoLocal, Equipo equipoVisitante, Arbitro arbitro) {
         this.fecha = fecha;
         this.lugar = lugar;
-        this.equipo = equipo;
+        this.equipoLocal = equipoLocal;
+        this.equipoVisitante = equipoVisitante;
         this.arbitro = arbitro;
     }
 
@@ -30,10 +32,17 @@ public class Partida {
     }
 
     public Equipo getEquipo() {
-        return equipo;
+        return equipoLocal;
     }
     public void setEquipo(Equipo equipo) {
-        this.equipo = equipo;
+        this.equipoLocal = equipo;
+    }
+
+    public Equipo getEquipoVisitante() {
+        return equipoVisitante;
+    }
+    public void setEquipoVisitante(Equipo equipoVisitante) {
+        this.equipoVisitante = equipoVisitante;
     }
 
     public Arbitro getArbitro() {
@@ -43,11 +52,12 @@ public class Partida {
         this.arbitro = arbitro;
     }
 
-    @Override
-    public String toString() {
-        return "Fecha: " + fecha + "\n" +
+    //metodo mostrar datos de la partida
+    public void mostrarPartida(){
+        System.out.println("Fecha: " + fecha + "\n" +
                 "Lugar: " + lugar + "\n" +
-                "Equipo: " + equipo + "\n" +
-                "Arbitro: " + arbitro + "\n";
+                "Equipo Local: " + equipoLocal.getNombreEquipo() + "\n" +
+                "Equipo Visitante: " + equipoVisitante.getNombreEquipo() + "\n" +
+                "Arbitro: " + arbitro.getNombre() + " " + arbitro.getApellido() + "\n");
     }
 }
